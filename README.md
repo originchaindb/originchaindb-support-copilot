@@ -1,5 +1,7 @@
 # OriginChainDB Support Copilot
 
+[![Starter checks](https://github.com/Originchain-ops/originchaindb-support-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Originchain-ops/originchaindb-support-copilot/actions/workflows/ci.yml)
+
 A live FAQ workspace for startup founders: browse your product documentation,
 search it, and optionally draft answers with local AI and source quotations.
 Built with **Python, FastAPI, OriginChainDB, and Ollama**.
