@@ -1,6 +1,6 @@
 # OriginChainDB Support Copilot
 
-[![Starter checks](https://github.com/Originchain-ops/originchaindb-support-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Originchain-ops/originchaindb-support-copilot/actions/workflows/ci.yml)
+[![Starter checks](https://github.com/originchaindb/originchaindb-support-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/originchaindb/originchaindb-support-copilot/actions/workflows/ci.yml)
 
 A live FAQ workspace for startup founders: browse your product documentation,
 search it, and optionally draft answers with local AI and source quotations.
@@ -31,7 +31,7 @@ You need Python 3.11+, [uv](https://docs.astral.sh/uv/getting-started/installati
 with schema/row, SQL SELECT, full-text, and vector access.
 
 ```sh
-git clone https://github.com/Originchain-ops/originchaindb-support-copilot.git
+git clone https://github.com/originchaindb/originchaindb-support-copilot.git
 cd originchaindb-support-copilot
 uv sync --extra dev --locked
 ```

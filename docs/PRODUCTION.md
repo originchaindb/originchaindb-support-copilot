@@ -50,7 +50,7 @@ if your host already has either. Replace `REVIEWED_COMMIT` before running.
 
 ```sh
 sudo useradd --system --user-group --home-dir /var/lib/support-copilot --shell /usr/sbin/nologin copilot
-sudo git clone https://github.com/Originchain-ops/originchaindb-support-copilot.git /opt/support-copilot
+sudo git clone https://github.com/originchaindb/originchaindb-support-copilot.git /opt/support-copilot
 sudo git -C /opt/support-copilot checkout REVIEWED_COMMIT
 cd /opt/support-copilot
 sudo uv sync --locked --no-dev

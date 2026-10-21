@@ -102,7 +102,7 @@ that broader answer-quality issue is solved.
 
 GitHub Actions is configured for Python 3.11/3.12 on Windows/Ubuntu and frontend
 tests on Ubuntu. All five jobs in the
-[initial published run](https://github.com/Originchain-ops/originchaindb-support-copilot/actions/runs/39537983303)
+[initial published run](https://github.com/originchaindb/originchaindb-support-copilot/actions/runs/39537983303)
 passed. The README badge links to the current workflow status. These jobs use
 test doubles; they do not execute a hosted database or production deployment.
 
