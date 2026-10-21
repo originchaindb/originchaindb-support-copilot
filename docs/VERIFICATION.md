@@ -4,6 +4,47 @@ This release simplifies the application into FAQ, Review queue, and Settings.
 The views read actual stored data. The included BeaconDesk corpus is fictional;
 no production or customer database was used.
 
+## OriginChainDB Cloud Free: verified
+
+On 21 October 2026, the starter also passed a real end-to-end run against an
+OriginChainDB **Cloud Free** development instance in Mumbai (`ap-south-1`).
+The console showed **Free**, **Running**, and **No charge**. The database
+endpoint used public HTTPS; the app and Ollama ran on the Windows computer.
+This was a cloud database connection, separate from the local-engine tests below.
+
+The [sanitized cloud receipt](cloud-verification-2026-10-21.json) records ten
+passing checks:
+
+- Eight sample documents/passages written, full-text/vector indexed, and read back.
+- Repeat ingestion retained the snapshot and eight-row count.
+- FAQ, Settings SQL count, and initially empty history read from the cloud.
+- Keyword, vector, and application-side hybrid retrieval returned the invitation source.
+- A real local-model invitation draft returned a validated exact quotation.
+- The saved question was read back from cloud history.
+- Negative feedback persisted in the cloud review queue.
+- An unsupported phone-support question returned insufficient evidence and persisted for review.
+
+![The tested cloud configuration: Free, No charge](cloud-free-plan.jpg)
+
+The observed instance allowance was 2 GB, while the public pricing page lists
+1 GB for Free. This records this account's configuration; it does not promise
+2 GB for new accounts. The console did not report used storage. These checks
+do not establish rate limits, cold-start behavior, concurrency, or production readiness.
+The unique synthetic fixture remains in the development database for inspection.
+
+Chrome then loaded the same cloud fixture: eight documents, keyword search for
+`export attachments`, a generated export answer with a source quotation, and
+saved negative feedback. Review queue displayed all three saved questions;
+Settings executed its live cloud SQL count and reported eight passages.
+Screenshots: [cloud FAQ](cloud-faq-demo.jpg) and
+[cloud Settings](cloud-settings-demo.jpg).
+
+The application was stopped after verification and its temporary `.env` was
+removed. Publishable files, the retained test receipt, and Git history were
+checked for the test key; there were no matches. Connection keys, the actual
+account endpoint, and tenant are omitted from the published receipt. The
+example configuration contains placeholders only.
+
 ## Automated checks
 
 - **43 Python tests passed**, covering ingestion, snapshots, adapters, citation
@@ -14,6 +55,11 @@ no production or customer database was used.
   feedback, navigation, safe text rendering, and failed connection reporting.
 - Ruff passed, all 25 installed Python packages were compatible, and both
   source and wheel distributions built successfully.
+
+After adding the cloud-only verification guard, **48 Python tests passed**
+and Ruff passed. The five additional cases check public-HTTPS requirements
+and rejection of loopback/private DNS addresses. The 43-test count above
+describes the earlier application release.
 
 These application tests use test doubles. The separate checks below used the
 real engine and real local models. jsdom verifies DOM behavior, not a browser's
@@ -93,8 +139,9 @@ that broader answer-quality issue is solved.
 
 ## Scope still unverified
 
-- Actual hosted free-account operation entitlements, cold starts, rate limits,
-  and console-metered storage. The free tier is the intended target.
+- Hosted free-account cold starts, rate limits, larger-corpus capacity, and
+  console-metered used storage. The core operations above passed on the observed
+  Free instance; this does not establish every account's entitlements or limits.
 - Production systemd/Caddy deployment. The templates and instructions require
   staging validation; no production host was deployed.
 - Real customer documents, larger corpora, multi-user load, prompt-injection
@@ -117,6 +164,8 @@ uv run support-copilot evaluate --mode keyword
 uv run support-copilot evaluate --mode vector
 uv run support-copilot evaluate --mode hybrid
 uv run python scripts/smoke_live.py
+# Require a public HTTPS database for the cloud run:
+uv run python scripts/smoke_live.py --require-cloud
 ```
 
 The smoke script writes and retains a unique fixture namespace in your

@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-21",
+  "database": "OriginChainDB Cloud Free",
+  "console_evidence": {
+    "plan": "Free",
+    "monthly_price": "No charge",
+    "environment": "Development",
+    "region": "ap-south-1",
+    "storage_allowance_gb": 2,
+    "storage_usage_measured": false,
+    "screenshot": "cloud-free-plan.jpg"
+  },
+  "connection": {
+    "https": true,
+    "public_address_verified": true,
+    "health_http_status": 200,
+    "account_identifiers_omitted": true
+  },
+  "application": "Python/FastAPI on Windows; cloud database; local Ollama models",
+  "passed": true,
+  "checks": [
+    "schema-row-fulltext-vector-ingestion-and-row-readback",
+    "repeat-ingestion-preserves-snapshot-and-row-count",
+    "live-faq-settings-and-empty-history",
+    "keyword-retrieval",
+    "vector-retrieval",
+    "hybrid-retrieval",
+    "local-model-answer-with-validated-citations",
+    "recent-question-readback",
+    "feedback-persists-in-review-queue",
+    "unsupported-answer-persists-in-review-queue"
+  ],
+  "fixture": {
+    "synthetic": true,
+    "namespace": "smoke_e918ddf093fd",
+    "documents": 8,
+    "passages": 8,
+    "embedding_dimensions": 768,
+    "source_utf8_bytes": 6022,
+    "raw_float32_vector_bytes": 24576
+  },
+  "answer": {
+    "question": "How do I invite a teammate?",
+    "answer": "To invite a teammate, open Settings > Members, select Invite member, enter their email address, and choose a role. Invitations expire after seven days.",
+    "status": "draft",
+    "citations": [
+      {
+        "id": "ab9b6d1c7a14b4624d46982d",
+        "source": "01-workspaces.md",
+        "version": "39ba5b48a9e6cc019420fdacedccfc0c5ce903c8265727d93b9eca5b25d633d9",
+        "start_line": 1,
+        "end_line": 24,
+        "quote": "To invite a teammate, open Settings > Members, select Invite member, enter their email address, and choose a role. Invitations expire after seven days."
+      }
+    ]
+  },
+  "unsupported_answer": {
+    "question": "Do you offer phone support?",
+    "answer": "The documentation does not contain enough evidence to answer this.",
+    "status": "needs_review",
+    "citations": []
+  },
+  "automated_tests": {
+    "python_passed": 48,
+    "lint": "passed"
+  },
+  "retention": "Fixture records remain in the configured development database.",
+  "limits": [
+    "The sample corpus is not a held-out benchmark.",
+    "This verifies the observed Free instance, not every free-account entitlement or capacity limit.",
+    "No production web host or multi-user load was deployed or tested.",
+    "AI drafts still require human review."
+  ],
+  "browser": {
+    "passed": true,
+    "documents_loaded": 8,
+    "keyword_search": "export attachments returned 04-exports.md",
+    "ai_question": "How do I export workspace data?",
+    "cited_draft_rendered": true,
+    "feedback_saved": true,
+    "review_queue_count": 3,
+    "settings_live_database_check": "connected",
+    "screenshots": [
+      "cloud-faq-demo.jpg",
+      "cloud-settings-demo.jpg"
+    ]
+  },
+  "credential_cleanup": {
+    "local_env_removed": true,
+    "application_stopped": true,
+    "publishable_files_scanned": 54,
+    "credential_matches": 0,
+    "git_history_matches": 0,
+    "account_endpoint_and_tenant_omitted": true
+  }
+}

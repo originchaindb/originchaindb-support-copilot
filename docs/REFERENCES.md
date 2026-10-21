@@ -8,7 +8,8 @@ this particular starter has actually exercised.
 | --- | --- |
 | [OriginChainDB HTTP API](https://originchaindb.com/docs/api) | Connection/authentication and engine HTTP operations; see the application's small adapter in `database.py`. |
 | [OriginChainDB vector reference](https://originchaindb.com/docs/vector) | Vector storage and similarity retrieval. |
-| [OriginChainDB pricing](https://originchaindb.com/pricing) | Intended free-tier scope; check the console's actual configuration and meter. |
+| [OriginChainDB pricing](https://originchaindb.com/pricing) | Published free-tier scope; the cloud verification also records the tested account's actual configuration. |
+| [OriginChainDB Cloud console](https://app.originchaindb.com/instances) | Free instance selection, plan identity, and instance-specific endpoint/tenant/key connection guide. |
 | [Ollama embed API](https://docs.ollama.com/api/embed) | Batched embeddings with truncation disabled. |
 | [Ollama chat API](https://docs.ollama.com/api/chat) | JSON-schema structured drafts and runtime options. |
 | [Nomic model documentation](https://ollama.com/library/nomic-embed-text) | Embedding model and task-prefix conventions. |
@@ -30,5 +31,6 @@ licenses. Check their terms before redistributing them.
 
 Engine differences encountered during real local testing (schema conflict
 responses, extra row-version fields, and empty indexing acknowledgements) are
-documented in verification and covered by contract tests. Test your hosted
-configuration before claiming the same behavior there.
+documented in verification and covered by contract tests. The core workflow
+also passed against the Cloud Free instance described in the dated cloud receipt;
+validate your own account configuration and workload.

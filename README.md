@@ -6,7 +6,11 @@ A live FAQ workspace for startup founders: browse your product documentation,
 search it, and optionally draft answers with local AI and source quotations.
 Built with **Python, FastAPI, OriginChainDB, and Ollama**.
 
-![Live FAQ with fictional BeaconDesk documentation stored in OriginChainDB](docs/faq-demo.jpg)
+**Verified with OriginChainDB Cloud Free on 21 October 2026:** cloud ingestion,
+keyword/vector/hybrid retrieval, cited drafts, history, and feedback passed
+against a real Free development instance. See the [test evidence](docs/VERIFICATION.md).
+
+![Live FAQ using fictional BeaconDesk documentation stored in OriginChainDB Cloud Free](docs/cloud-faq-demo.jpg)
 
 ## Three simple views
 
@@ -24,11 +28,22 @@ The included **BeaconDesk** documents are fictional sample data. They are
 actually indexed and queried in OriginChainDB; there are no canned answers
 or dashboard counters. Replace them with your own approved documentation.
 
-## Run locally
+## Run the app with OriginChainDB Cloud Free
 
 You need Python 3.11+, [uv](https://docs.astral.sh/uv/getting-started/installation/),
-[Ollama](https://ollama.com/download), and an OriginChainDB development database
+[Ollama](https://ollama.com/download), and an OriginChainDB Cloud Free development database
 with schema/row, SQL SELECT, full-text, and vector access.
+
+The Python web app and Ollama run on your computer. The documents, search
+indexes, questions, and feedback are stored in your cloud database.
+
+In the [cloud console](https://app.originchaindb.com/instances), open your
+**Free** development instance and select **Connect > Application API**. Copy
+its HTTPS endpoint and tenant from that instance's connection example. The
+tenant is a separate identifier; do not substitute the instance ID.
+Use the instance key issued when the database was created as `OC_BEARER`.
+The console does not display an existing key again. Replacing an instance
+key immediately invalidates it for every client using the previous key.
 
 ```sh
 git clone https://github.com/originchaindb/originchaindb-support-copilot.git
@@ -127,8 +142,10 @@ GitHub publication distributes source code, not a running database or hosted app
 
 [OriginChainDB pricing](https://originchaindb.com/pricing) lists one free database
 per account with 1 GB of storage and shared scale-to-zero infrastructure
-(checked 21 October 2026). This is the intended starter target. Validate the
-required operations on your actual free account before relying on it.
+(checked 21 October 2026). The starter's core workflow passed on an actual
+Cloud Free development instance. That account's console displayed a 2 GB
+allowance and **No charge**; do not treat it as a promise of 2 GB for new accounts.
+Check your own configuration. Used-storage metering and load limits were not measured.
 
 There is no paid model API requirement. Hosting, hardware, electricity, and
 network usage have their own costs. The Settings payload sizes exclude indexes,
@@ -156,6 +173,20 @@ For a real development connection, run `uv run python scripts/smoke_live.py`.
 It creates and retains a uniquely named test namespace. It does not delete
 existing data. Full results and unresolved limits are in
 [verification](docs/VERIFICATION.md).
+
+For cloud verification, use:
+
+```sh
+uv run python scripts/smoke_live.py --require-cloud
+```
+
+This refuses local/private database addresses and tests repeat ingestion,
+keyword/vector/hybrid retrieval, a cited draft, an unsupported question,
+saved history, and feedback. Confirm **Free** in the console separately:
+an HTTPS endpoint alone does not establish the billing plan. Test reports
+contain sample data, not connection keys. When finished with a temporary
+verification connection, stop the app and remove `.env` before sharing the
+checkout. Keep your instance key in your own secret manager.
 
 **A valid citation does not guarantee a correct answer.** A tested webhook
 answer overstated what deduplication guarantees despite quoting a real passage.
