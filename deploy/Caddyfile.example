@@ -1,0 +1,16 @@
+# Replace this hostname and the placeholder hash before validation.
+# Keep credentials/hashes in the server-local copy, never this repository.
+faq.example.com {
+    basic_auth {
+        operator REPLACE_WITH_CADDY_HASH_PASSWORD_OUTPUT
+    }
+    request_body {
+        max_size 16KB
+    }
+    reverse_proxy 127.0.0.1:8000 {
+        header_up -Authorization
+        transport http {
+            response_header_timeout 240s
+        }
+    }
+}

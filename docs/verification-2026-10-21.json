@@ -1,0 +1,915 @@
+{
+  "date": "2026-10-21",
+  "scope": "Synthetic sample data, isolated local engine, real local models; no hosted free-account test.",
+  "python": "3.12.10",
+  "python_tests_passed": 43,
+  "frontend_tests_passed": 3,
+  "engine": {
+    "environment": "Released ARM64 Strata under QEMU/WSL2",
+    "sha256": "2a970f34c3ca159c70b5ef9b359746f4bbfe5bc3df7895d78168752ae0ec0a5c",
+    "version": "0.1.0",
+    "git_sha": "1d00d0b819f25e4172b449d6a740309e48688b87",
+    "store_backend": "strata"
+  },
+  "ollama": {
+    "version": "0.40.6",
+    "cpu_only": true,
+    "models": [
+      {
+        "name": "nomic-embed-text:latest",
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "size": 274302450
+      },
+      {
+        "name": "qwen2.5:3b",
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "size": 1929912432
+      }
+    ]
+  },
+  "corpus": {
+    "snapshot": "aa7a755a1b2baea6",
+    "table": "founder_support_aa7a755a1b2baea6.chunks",
+    "chunk_count": 8,
+    "document_count": 8,
+    "embedding_model": "nomic-embed-text:latest",
+    "model_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "dimension": 768,
+    "source_utf8_bytes": 6022,
+    "raw_float32_vector_bytes": 24576,
+    "size_note": "Payload estimate only; excludes indexes, metadata, WAL and old snapshots."
+  },
+  "repeat_ingestion": {
+    "same_snapshot": true,
+    "unchanged_row_count": 8
+  },
+  "retrieval": {
+    "keyword": {
+      "cases": 24,
+      "hit_rate_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "results": [
+        {
+          "id": "q01",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "02-roles.md",
+            "07-recovery.md",
+            "06-webhooks.md",
+            "04-exports.md"
+          ]
+        },
+        {
+          "id": "q02",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "05-api.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q03",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "02-roles.md",
+            "03-billing.md",
+            "07-recovery.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q04",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "03-billing.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q05",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "01-workspaces.md",
+            "06-webhooks.md",
+            "03-billing.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q06",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "04-exports.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q07",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "04-exports.md",
+            "02-roles.md",
+            "01-workspaces.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q08",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "04-exports.md",
+            "05-api.md",
+            "01-workspaces.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q09",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "05-api.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q10",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "01-workspaces.md",
+            "02-roles.md",
+            "03-billing.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q11",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "03-billing.md",
+            "08-notifications.md",
+            "05-api.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q12",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "02-roles.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q13",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "01-workspaces.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q14",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "04-exports.md",
+            "06-webhooks.md",
+            "07-recovery.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q15",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "01-workspaces.md",
+            "07-recovery.md",
+            "06-webhooks.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q16",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "03-billing.md",
+            "04-exports.md",
+            "05-api.md",
+            "08-notifications.md"
+          ]
+        },
+        {
+          "id": "q17",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "02-roles.md",
+            "01-workspaces.md",
+            "08-notifications.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q18",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "05-api.md",
+            "07-recovery.md",
+            "04-exports.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q19",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "08-notifications.md",
+            "02-roles.md",
+            "01-workspaces.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q20",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q21",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "04-exports.md",
+            "01-workspaces.md",
+            "05-api.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q22",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "02-roles.md",
+            "01-workspaces.md",
+            "07-recovery.md",
+            "04-exports.md"
+          ]
+        },
+        {
+          "id": "q23",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "06-webhooks.md",
+            "04-exports.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q24",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "05-api.md",
+            "01-workspaces.md"
+          ]
+        }
+      ]
+    },
+    "vector": {
+      "cases": 24,
+      "hit_rate_at_5": 1.0,
+      "mrr_at_5": 0.9583333333333334,
+      "results": [
+        {
+          "id": "q01",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "02-roles.md",
+            "08-notifications.md",
+            "06-webhooks.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q02",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "04-exports.md",
+            "03-billing.md",
+            "07-recovery.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q03",
+          "rank": 2,
+          "sources": [
+            "02-roles.md",
+            "01-workspaces.md",
+            "04-exports.md",
+            "03-billing.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q04",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "03-billing.md",
+            "08-notifications.md",
+            "07-recovery.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q05",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "07-recovery.md",
+            "04-exports.md"
+          ]
+        },
+        {
+          "id": "q06",
+          "rank": 2,
+          "sources": [
+            "01-workspaces.md",
+            "02-roles.md",
+            "04-exports.md",
+            "03-billing.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q07",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "04-exports.md",
+            "08-notifications.md",
+            "05-api.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q08",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "08-notifications.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q09",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "01-workspaces.md",
+            "07-recovery.md",
+            "02-roles.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q10",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "02-roles.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q11",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "05-api.md",
+            "07-recovery.md",
+            "06-webhooks.md",
+            "08-notifications.md"
+          ]
+        },
+        {
+          "id": "q12",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "07-recovery.md",
+            "05-api.md",
+            "03-billing.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q13",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "04-exports.md",
+            "01-workspaces.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q14",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q15",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "07-recovery.md",
+            "04-exports.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q16",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "05-api.md",
+            "01-workspaces.md",
+            "08-notifications.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q17",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "05-api.md",
+            "07-recovery.md",
+            "03-billing.md",
+            "08-notifications.md"
+          ]
+        },
+        {
+          "id": "q18",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "05-api.md",
+            "07-recovery.md",
+            "08-notifications.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q19",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "06-webhooks.md",
+            "04-exports.md",
+            "03-billing.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q20",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "01-workspaces.md",
+            "06-webhooks.md",
+            "05-api.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q21",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "04-exports.md",
+            "03-billing.md",
+            "06-webhooks.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q22",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "07-recovery.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q23",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q24",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "04-exports.md",
+            "03-billing.md",
+            "06-webhooks.md",
+            "07-recovery.md"
+          ]
+        }
+      ]
+    },
+    "hybrid": {
+      "cases": 24,
+      "hit_rate_at_5": 1.0,
+      "mrr_at_5": 0.9791666666666666,
+      "results": [
+        {
+          "id": "q01",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "02-roles.md",
+            "06-webhooks.md",
+            "07-recovery.md",
+            "08-notifications.md"
+          ]
+        },
+        {
+          "id": "q02",
+          "rank": 1,
+          "sources": [
+            "01-workspaces.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "03-billing.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q03",
+          "rank": 2,
+          "sources": [
+            "02-roles.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "04-exports.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q04",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "03-billing.md",
+            "01-workspaces.md",
+            "08-notifications.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q05",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "07-recovery.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q06",
+          "rank": 1,
+          "sources": [
+            "02-roles.md",
+            "01-workspaces.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q07",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "04-exports.md",
+            "08-notifications.md",
+            "01-workspaces.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q08",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "04-exports.md",
+            "08-notifications.md",
+            "07-recovery.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q09",
+          "rank": 1,
+          "sources": [
+            "03-billing.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "02-roles.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q10",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "02-roles.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q11",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "05-api.md",
+            "07-recovery.md",
+            "08-notifications.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q12",
+          "rank": 1,
+          "sources": [
+            "04-exports.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "06-webhooks.md"
+          ]
+        },
+        {
+          "id": "q13",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "01-workspaces.md",
+            "02-roles.md",
+            "04-exports.md"
+          ]
+        },
+        {
+          "id": "q14",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q15",
+          "rank": 1,
+          "sources": [
+            "05-api.md",
+            "06-webhooks.md",
+            "07-recovery.md",
+            "01-workspaces.md",
+            "04-exports.md"
+          ]
+        },
+        {
+          "id": "q16",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "05-api.md",
+            "03-billing.md",
+            "04-exports.md",
+            "08-notifications.md"
+          ]
+        },
+        {
+          "id": "q17",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "08-notifications.md",
+            "02-roles.md"
+          ]
+        },
+        {
+          "id": "q18",
+          "rank": 1,
+          "sources": [
+            "06-webhooks.md",
+            "05-api.md",
+            "07-recovery.md",
+            "03-billing.md",
+            "04-exports.md"
+          ]
+        },
+        {
+          "id": "q19",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "06-webhooks.md",
+            "08-notifications.md",
+            "04-exports.md",
+            "01-workspaces.md"
+          ]
+        },
+        {
+          "id": "q20",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "01-workspaces.md",
+            "06-webhooks.md",
+            "05-api.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q21",
+          "rank": 1,
+          "sources": [
+            "07-recovery.md",
+            "04-exports.md",
+            "01-workspaces.md",
+            "03-billing.md",
+            "05-api.md"
+          ]
+        },
+        {
+          "id": "q22",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "01-workspaces.md",
+            "02-roles.md",
+            "07-recovery.md",
+            "03-billing.md"
+          ]
+        },
+        {
+          "id": "q23",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "04-exports.md",
+            "06-webhooks.md",
+            "05-api.md",
+            "07-recovery.md"
+          ]
+        },
+        {
+          "id": "q24",
+          "rank": 1,
+          "sources": [
+            "08-notifications.md",
+            "04-exports.md",
+            "07-recovery.md",
+            "03-billing.md",
+            "05-api.md"
+          ]
+        }
+      ]
+    }
+  },
+  "answer_cases": [
+    {
+      "id": "q01",
+      "question": "How do I invite a teammate?",
+      "expected_status": "draft",
+      "passed": true,
+      "elapsed_s": 40.758,
+      "answer": {
+        "answer": "To invite a teammate, open Settings > Members, select Invite member, enter their email address, and choose a role. Invitations expire after seven days.",
+        "status": "draft",
+        "citations": [
+          {
+            "id": "ab9b6d1c7a14b4624d46982d",
+            "source": "01-workspaces.md",
+            "version": "39ba5b48a9e6cc019420fdacedccfc0c5ce903c8265727d93b9eca5b25d633d9",
+            "start_line": 1,
+            "end_line": 24,
+            "quote": "To invite a teammate, open Settings > Members, select Invite member, enter their email address, and choose a role. Invitations expire after seven days."
+          }
+        ]
+      }
+    },
+    {
+      "id": "q25",
+      "question": "Do you offer phone support?",
+      "expected_status": "needs_review",
+      "passed": true,
+      "elapsed_s": 33.074,
+      "answer": {
+        "answer": "The documentation does not contain enough evidence to answer this.",
+        "status": "needs_review",
+        "citations": []
+      }
+    }
+  ],
+  "live_faq_reads": true,
+  "live_recent_questions": true,
+  "feedback_queue": true,
+  "http": {
+    "passed": true,
+    "checks": [
+      "faq-page-and-browser-headers",
+      "static-assets-and-liveness",
+      "real-database-documents-and-safe-settings",
+      "real-history-citations-and-review-queue",
+      "keyword-search-without-model-generation",
+      "post-origin-and-host-boundaries"
+    ],
+    "document_count": 8,
+    "recent_count": 2,
+    "review_count": 2
+  },
+  "local_fixture_disk_kib": 276,
+  "storage_scope": "Entire isolated tmpfs engine fixture; not hosted free-tier metering.",
+  "passed": true,
+  "earlier_attempt": "Ollama HTTP 500; server log reported CPU buffer allocation failure. Complete repeat passed.",
+  "limits": [
+    "Development sample is not held out.",
+    "Valid citations do not establish answer correctness.",
+    "Historical q17 answer-quality error remains documented.",
+    "Production deployment not performed."
+  ]
+}

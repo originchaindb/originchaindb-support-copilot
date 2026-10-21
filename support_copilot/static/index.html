@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ · OriginChainDB Support Copilot</title>
+<link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head><body>
+<header><a class="brand" href="#faq">Support Copilot <span>by OriginChainDB</span></a>
+<nav aria-label="Workspace"><a href="#faq" aria-current="page">FAQ</a><a href="#review">Review queue</a><a href="#settings">Settings</a></nav></header>
+<main>
+<section id="faq-view" aria-labelledby="faq-title">
+<h1 id="faq-title">Your product FAQ</h1><p class="muted">Find answers in your documentation. Use AI when you need a draft.</p>
+<form id="ask-form" class="panel"><label for="question">What would you like to know?</label>
+<div class="search"><input id="question" maxlength="2000" placeholder="Ask about your product…" required><button id="submit" type="submit">Search docs</button></div>
+<label class="check"><input id="generate" type="checkbox"> Draft an answer with local AI</label><p id="search-hint" class="caption">Keyword search · no AI generation</p></form>
+<div id="answer-area" aria-live="polite"></div>
+<div class="section-heading"><h2>Documentation</h2><button id="refresh-docs" class="secondary" type="button">Refresh</button></div>
+<p id="status" class="caption" aria-live="polite">Loading from your database…</p><div id="documents" aria-live="polite"></div>
+<h2>Recent questions</h2><p class="caption">Latest 20 saved drafts and unanswered questions for the active documentation. Drafts are not approved FAQ answers.</p><div id="recent" aria-live="polite"></div>
+</section>
+<section id="review-view" aria-labelledby="review-title" hidden>
+<h1 id="review-title">Review queue</h1><p class="muted">Questions that need better documentation or a human response. Latest 50 across this workspace.</p>
+<button id="refresh-queue" class="secondary" type="button">Refresh queue</button><div id="queue" aria-live="polite"></div></section>
+<section id="settings-view" aria-labelledby="settings-title" hidden>
+<h1 id="settings-title">Settings</h1><p class="muted">Current server configuration and active documentation.</p>
+<button id="refresh-settings" class="secondary" type="button">Check connection</button><p id="settings-status" class="caption" aria-live="polite"></p>
+<dl id="settings" class="panel" aria-live="polite"></dl>
+<p class="caption">Read-only configuration. Change your server’s .env file and restart to update settings. Credentials are never displayed.</p>
+<p class="caption">Source and vector sizes describe payloads, not billed database storage. Old snapshots and question history remain stored.</p></section>
+<footer>AI answers are drafts. Check the cited sources before using them.</footer>
+</main></body></html>
